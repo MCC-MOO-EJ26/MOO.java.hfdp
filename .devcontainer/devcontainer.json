@@ -1,0 +1,11 @@
+{
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"vscjava.vscode-java-pack",
+				"ms-vscode.copilot-mermaid-diagram"
+			]
+		}
+	}
+}
