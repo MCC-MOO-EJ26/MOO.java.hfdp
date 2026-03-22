@@ -1,6 +1,9 @@
 # Imagen base con Java 17 de Microsoft Dev Containers
 FROM mcr.microsoft.com/devcontainers/java:1-17
 
+# Eliminar el repositorio de Yarn para evitar el error de clave GPG (no es necesario en este proyecto)
+RUN rm -f /etc/apt/sources.list.d/yarn.list
+
 # Instalar dependencias para GUI: TigerVNC, noVNC, websockify y un gestor de ventanas ligero
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get install -y --no-install-recommends \
