@@ -20,7 +20,8 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
        libxi6 \
        fonts-dejavu \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+     && rm -rf /var/lib/apt/lists/* \
+     && ln -sf /usr/share/novnc/vnc.html /usr/share/novnc/index.html
 
 # Instalar tigervnc-tools para asegurar vncpasswd
 RUN apt-get update && apt-get install -y tigervnc-tools && apt-get clean && rm -rf /var/lib/apt/lists/*
