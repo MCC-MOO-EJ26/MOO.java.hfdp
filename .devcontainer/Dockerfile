@@ -22,6 +22,9 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
+# Instalar tigervnc-tools para asegurar vncpasswd
+RUN apt-get update && apt-get install -y tigervnc-tools && apt-get clean && rm -rf /var/lib/apt/lists/*
+
 # Configurar VNC sin contraseña (entorno de desarrollo)
 RUN mkdir -p /home/vscode/.vnc \
     && echo "1234" | vncpasswd -f > /home/vscode/.vnc/passwd \
