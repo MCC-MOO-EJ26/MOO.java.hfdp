@@ -20,10 +20,11 @@ Other links for the book are available on the book page at <a href="http://wicke
 
 ## Mostrar el desktop-lite
 
-1. Mostrar la terminal con `Ctrl+ñ`.
-2. Dar clic en la pestaña ```PUERTOS``` y agregar el puerto ```6080```. Se agregará una URL.
-3. En la columna ```Dirección reenviada``` dar clic en el Globo terráqueo para abrir una pestaña del navegador donde estará el *desktop-lite*. O bien dar clic en ```Abrir en Explorador Simple``` para mostrar el *desktop-lite* en un navegador sencillo incrustado en la misma IDE.
-4. En la nueva pestaña abierta se mostrará el mensaje *noVNC* y dar clic en el botón ```Conectar```.
+1. Seleccionar una máquina virtual de 8 Gb y 32 Gb de disco duro.
+2. Mostrar la terminal con `Ctrl+ñ`.
+3. Dar clic en la pestaña ```PUERTOS``` y agregar el puerto ```6080```. Se agregará una URL.
+4. En la columna ```Dirección reenviada``` dar clic en el Globo terráqueo para abrir una pestaña del navegador donde estará el *desktop-lite*. O bien dar clic en ```Abrir en Explorador Simple``` para mostrar el *desktop-lite* en un navegador sencillo incrustado en la misma IDE.
+5. En la nueva pestaña abierta se mostrará el mensaje *noVNC* y dar clic en el botón ```Conectar```.
 
 A partir de este momento, toda la programación Java-GUI se mostrará en el *desktop-lite* (simulará un escritorio de un sistema de Ventanas).
 
