@@ -1,11 +1,29 @@
 {
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"GitHub.copilot",
-				"vscjava.vscode-java-pack",
-				"ms-vscode.copilot-mermaid-diagram"
-			]
-		}
-	}
+    "name": "Java Swing Dev Environment",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "remoteUser": "vscode",
+    "forwardPorts": [6080],
+    "portsAttributes": {
+        "6080": {
+            "label": "noVNC (GUI en navegador)",
+            "onAutoForward": "openBrowser"
+        }
+    },
+    "postStartCommand": "DISPLAY=:1 /home/vscode/start-vnc.sh",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "java.configuration.updateBuildConfiguration": "automatic"
+            },
+            "extensions": [
+                "vscjava.vscode-java-pack",
+                "vscjava.vscode-java-debug",
+                "redhat.java",
+                "GitHub.copilot",
+                "ms-vscode.copilot-mermaid-diagram"
+            ]
+        }
+    }
 }
