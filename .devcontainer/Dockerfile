@@ -33,12 +33,13 @@ RUN mkdir -p /home/vscode/.vnc \
     && chown -R vscode:vscode /home/vscode/.vnc
 
 # Script de arranque para VNC + noVNC
-RUN echo '#!/bin/bash\n\
+RUN printf '#!/bin/bash\n\
 vncserver :1 -geometry 1280x800 -depth 24 -localhost no &\n\
 sleep 2\n\
+export DISPLAY=:1\n\
 websockify --web=/usr/share/novnc/ 6080 localhost:5901 &\n\
 openbox-session &\n\
-echo "VNC y noVNC iniciados. Abre el puerto 6080 en tu navegador."' \
+echo "VNC y noVNC iniciados. Abre el puerto 6080 en tu navegador."\n' \
     > /home/vscode/start-vnc.sh \
     && chmod +x /home/vscode/start-vnc.sh \
     && chown vscode:vscode /home/vscode/start-vnc.sh

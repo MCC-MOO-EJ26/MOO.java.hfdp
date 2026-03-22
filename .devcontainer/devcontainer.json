@@ -11,7 +11,7 @@
             "onAutoForward": "openBrowser"
         }
     },
-    "postStartCommand": "DISPLAY=:1 /home/vscode/start-vnc.sh",
+    "postStartCommand": "/home/vscode/start-vnc.sh",
     "customizations": {
         "vscode": {
             "settings": {
